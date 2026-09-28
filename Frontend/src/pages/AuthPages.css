@@ -1,0 +1,75 @@
+.auth-page {
+  min-height: 100vh; display: flex;
+}
+
+.auth-deco {
+  flex: 1; background: var(--forest);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; padding: 40px;
+}
+@media (max-width: 768px) { .auth-deco { display: none; } }
+
+.deco-circle {
+  position: absolute; border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+.deco-1 { width: 500px; height: 500px; top: -150px; right: -150px; }
+.deco-2 { width: 300px; height: 300px; bottom: -100px; left: -80px;
+  background: rgba(106,171,122,0.1); }
+
+.deco-text { position: relative; z-index: 1; color: white; max-width: 380px; }
+.deco-text h1 {
+  font-family: var(--font-display); font-size: 52px; font-weight: 700;
+  line-height: 1.1; margin-bottom: 20px; color: var(--mint);
+}
+.deco-text p { font-size: 17px; color: rgba(255,255,255,0.7); line-height: 1.7; }
+.deco-leaves { font-size: 28px; margin-top: 32px; letter-spacing: 8px; }
+
+.auth-form-side {
+  width: 480px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px 24px; background: var(--cream);
+}
+@media (max-width: 768px) { .auth-form-side { width: 100%; } }
+
+.auth-card { width: 100%; max-width: 400px; }
+
+.auth-logo {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 28px;
+}
+.auth-logo-icon {
+  width: 40px; height: 40px; background: var(--sage);
+  border-radius: 12px; display: flex; align-items: center;
+  justify-content: center; color: white;
+}
+.auth-logo span {
+  font-family: var(--font-display); font-size: 20px;
+  font-weight: 700; color: var(--forest);
+}
+.auth-card h2 {
+  font-family: var(--font-display); font-size: 30px;
+  font-weight: 700; color: var(--forest); margin-bottom: 6px;
+}
+.auth-sub { color: var(--smoke); font-size: 15px; margin-bottom: 28px; }
+
+.auth-form { display: flex; flex-direction: column; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 13px; font-weight: 600; color: var(--charcoal); }
+.input-wrap { position: relative; display: flex; align-items: center; }
+.input-icon {
+  position: absolute; left: 12px; color: var(--smoke); pointer-events: none;
+}
+.input-wrap .input { padding-left: 38px; }
+.pw-toggle {
+  position: absolute; right: 12px; background: none; border: none;
+  cursor: pointer; color: var(--smoke); display: flex; align-items: center;
+}
+.btn-block { width: 100%; justify-content: center; padding: 12px; font-size: 15px; margin-top: 4px; }
+
+.auth-switch {
+  text-align: center; margin-top: 20px;
+  font-size: 14px; color: var(--smoke);
+}
+.auth-switch a { color: var(--sage); font-weight: 600; text-decoration: none; }
+.auth-switch a:hover { text-decoration: underline; }

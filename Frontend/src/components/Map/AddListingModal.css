@@ -1,0 +1,59 @@
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(26,46,26,0.5);
+  z-index: 2000; display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-card {
+  background: var(--cream); border-radius: var(--radius-lg);
+  width: 100%; max-width: 520px; max-height: 90vh;
+  overflow-y: auto; box-shadow: var(--shadow-lg);
+}
+.modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px; border-bottom: 1px solid var(--mist);
+  position: sticky; top: 0; background: var(--cream); z-index: 1;
+}
+.modal-title {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); font-size: 20px;
+  font-weight: 700; color: var(--forest);
+}
+.modal-close {
+  background: none; border: none; cursor: pointer;
+  color: var(--smoke); padding: 4px; border-radius: 6px;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: var(--mist); }
+
+.modal-form { padding: 20px 24px; display: flex; flex-direction: column; gap: 16px; }
+
+.dropzone {
+  border: 2px dashed #c5d9c7; border-radius: var(--radius);
+  min-height: 140px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.2s; overflow: hidden; background: white;
+}
+.dropzone.active { border-color: var(--sage); background: var(--mist); }
+.dropzone.has-image { border-style: solid; border-color: var(--sage); }
+.drop-placeholder {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  color: var(--smoke);
+}
+.drop-placeholder svg { color: var(--fern); }
+.drop-placeholder span { font-size: 14px; font-weight: 500; }
+.drop-placeholder small { font-size: 12px; }
+.drop-preview { width: 100%; height: 160px; object-fit: cover; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 13px; font-weight: 600; color: var(--charcoal); }
+textarea.input { resize: vertical; min-height: 80px; }
+
+.location-row { display: flex; gap: 8px; }
+.location-row .input { flex: 1; }
+
+.modal-actions {
+  display: flex; gap: 10px; justify-content: flex-end;
+  padding-top: 8px; border-top: 1px solid var(--mist); margin-top: 4px;
+}

@@ -1,0 +1,62 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(247,243,238,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(74,124,89,0.12);
+  height: 64px;
+}
+.navbar-inner {
+  max-width: 1280px; margin: 0 auto;
+  padding: 0 24px; height: 100%;
+  display: flex; align-items: center; gap: 32px;
+}
+.navbar-brand {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; flex-shrink: 0;
+}
+.brand-icon {
+  width: 36px; height: 36px; background: var(--sage);
+  border-radius: 10px; display: flex; align-items: center;
+  justify-content: center; color: white;
+}
+.brand-text {
+  font-family: var(--font-display); font-size: 22px;
+  font-weight: 700; color: var(--forest);
+}
+.brand-text span { color: var(--sage); }
+
+.navbar-links {
+  display: flex; align-items: center; gap: 4px; flex: 1;
+}
+.nav-link {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 14px; border-radius: 8px;
+  text-decoration: none; font-size: 14px; font-weight: 500;
+  color: var(--smoke); transition: all 0.2s;
+}
+.nav-link:hover, .nav-link.active {
+  background: var(--mist); color: var(--sage);
+}
+
+.navbar-actions { margin-left: auto; }
+.user-menu { display: flex; align-items: center; gap: 10px; }
+.user-avatar {
+  width: 32px; height: 32px; background: var(--sage);
+  border-radius: 50%; color: white; font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+}
+.user-name { font-size: 14px; font-weight: 500; color: var(--charcoal); }
+.auth-btns { display: flex; gap: 8px; }
+.btn-sm { padding: 7px 14px; font-size: 13px; }
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--charcoal); }
+
+@media (max-width: 768px) {
+  .menu-toggle { display: flex; margin-left: auto; }
+  .navbar-links {
+    display: none; position: absolute; top: 64px; left: 0; right: 0;
+    background: var(--cream); border-bottom: 1px solid var(--mist);
+    flex-direction: column; padding: 12px 16px; gap: 4px;
+  }
+  .navbar-links.open { display: flex; }
+  .navbar-actions { display: none; }
+}
